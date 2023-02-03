@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ats.hr.prm.controller.Empty">
+    <Page title="Welcome to my App">
+        <Image src="https://cdn.wallpapersafari.com/11/69/pYC4m7.jpg" width="100%" height="100%"></Image>
+    </Page>
+</mvc:View>

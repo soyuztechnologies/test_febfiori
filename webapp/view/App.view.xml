@@ -1,0 +1,4 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ats.hr.prm.controller.App">
+    <!-- We will put a container control -->
+    <SplitApp id="idAppCon"></SplitApp>
+</mvc:View>

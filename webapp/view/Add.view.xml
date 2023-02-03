@@ -1,0 +1,67 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+controllerName="com.ats.hr.prm.controller.Add">
+    <Page title="Manage Product">
+        <f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Product Id" />
+				<Input id="name" value="{local>/productData/PRODUCT_ID}" submit="onEnter"/>
+                <Button icon="sap-icon://batch-payments" tooltip="Get Most Expensive Product" press="onExpensive"></Button>
+				<Label text="Name/Description" />
+				<Input value="{local>/productData/NAME}">
+				</Input>
+				<Input value="{local>/productData/DESCRIPTION}">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4" />
+					</layoutData>
+				</Input>
+				<Label text="Supplier Id" />
+				<Input value="{local>/productData/SUPPLIER_ID}">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4" />
+					</layoutData>
+				</Input>
+				<Label text="Price" />
+				<Input value="{local>/productData/PRICE}" type="Number">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4" />
+					</layoutData>
+				</Input>
+				<Input value="{local>/productData/CURRENCY_CODE}" />
+				<Label text="Category" />
+				<Select id="category" selectedKey="{local>/productData/CATEGORY}">
+					<items>
+						<core:Item text="Notebooks" key="Notebooks"/>
+						<core:Item text="Mice" key="Mice"/>
+						<core:Item text="Projectors" key="Projectors"/>
+					</items>
+				</Select>
+			</f:content>
+		</f:SimpleForm>
+        <Image id="myProduct"></Image>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button id="idSave" text="Save" press="onSave" type="Accept"></Button>
+                <Button id="idDelete" text="Delete" press="onDelete" type="Reject"></Button>
+                <Button text="Clear" press="onClear" type="Clear"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

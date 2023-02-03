@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+controllerName="com.ats.hr.prm.controller.View1">
+    <!-- We will put a container control -->
+    <Page title="First View">
+        <content>
+            <SearchField id="idSearch" search="onSearch" ></SearchField>
+            <List id="idList" items="{/ProductSet}" selectionChange="onSelectionChange" mode="SingleSelectMaster" delete="onDeleteItem"
+            growing="true" growingThreshold="10">
+                <items>
+                    <ObjectListItem title="{NAME}" intro="{CATEGORY}" number="{PRICE}" numberUnit="{CURRENCY_CODE}" 
+                    icon="sap-icon://product">
+                        <firstStatus>
+                            <ObjectStatus text="{SUPPLIER_ID}"></ObjectStatus>
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+            <!-- <Button text="Next View" press="onNext"></Button> -->
+        </content>
+        <headerContent>
+            <Button icon="sap-icon://initiative" tooltip="Navigate To next" press="onNext"></Button>
+        </headerContent>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://add" tooltip="Add new product" press="onAdd"></Button>
+                <Button icon="sap-icon://home" tooltip="Create new sales order" press="onAddSO"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
