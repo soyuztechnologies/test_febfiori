@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build":"ui5 build",
+        "build": "ui5 build",
         "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
         "undeploy": "fiori undeploy --config ui5-deploy.yaml",
         "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
@@ -13,7 +13,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@sap/ux-ui5-tooling": "^1.8.5"
+        "@sap/ux-ui5-tooling": "^1.8.6"
     },
     "devDependencies": {
         "rimraf": "^3.0.2",
@@ -21,6 +21,7 @@
     },
     "ui5": {
         "dependencies": [
+            "@sap/ux-ui5-tooling",
             "ui5-task-flatten-library"
         ]
     }
